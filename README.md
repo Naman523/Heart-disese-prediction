@@ -1,71 +1,96 @@
-# Heart Disease Prediction Project
+❤️ Heart Disease Prediction Project
 
-## Overview
-This project aims to **predict the presence of heart disease** in patients using a structured dataset. It leverages machine learning models to classify patients based on clinical features and provides interpretable results for healthcare decision support.
+🚀 Overview
 
----
+This project predicts the presence of heart disease in patients using a structured dataset.
+It leverages machine learning models to classify patients based on clinical features, providing interpretable results for healthcare decision support.
 
-## Dataset
-- **Source:** UCI Heart Disease dataset (or your own CSV: `heart_disease_data.csv`)  
-- **Columns:**
-  - `age`, `sex`, `cp`, `trestbps`, `chol`, `fbs`, `restecg`, `thalach`, `exang`, `oldpeak`, `slope`, `ca`, `thal`, `target`  
-- **Target:** `0` = no heart disease, `1` = presence of heart disease  
+💡 Goal: Early prediction of heart disease to assist preventive healthcare.
 
----
+📊 Dataset
 
-## Features
-- **Categorical:** `sex, cp, fbs, restecg, exang, slope, ca, thal`  
-- **Numerical:** `age, trestbps, chol, thalach, oldpeak`  
+Source: UCI Heart Disease Dataset (heart_disease_data.csv)
 
----
+Columns:
+age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, target
 
-## Project Steps
+Target:
 
-1. **Exploratory Data Analysis (EDA)**
-   - Inspected dataset shape, missing values, and statistics  
-   - Visualized distributions with histograms and correlation heatmaps  
-   - Checked target balance  
+0 = No heart disease
 
-2. **Data Preprocessing**
-   - Defined categorical and numerical columns  
-   - Applied **Standard Scaling** for numeric features  
-   - Applied **One-Hot Encoding** for categorical features  
-   - Split dataset into training and test sets (80/20)  
+1 = Presence of heart disease
 
-3. **Modeling**
-   - Trained three models:
-     - Logistic Regression
-     - Random Forest Classifier
-     - XGBoost Classifier  
-   - Evaluated using **accuracy, precision, recall, F1-score, ROC-AUC**  
+✨ Features
 
-4. **Hyperparameter Tuning**
-   - Optimized Random Forest using **RandomizedSearchCV**  
-   - Achieved **best ROC-AUC: 0.926**  
+Categorical: sex, cp, fbs, restecg, exang, slope, ca, thal
 
-5. **Feature Importance**
-   - Extracted and visualized top 15 features using Random Forest  
+Numerical: age, trestbps, chol, thalach, oldpeak
 
-6. **Model Saving**
-   - Saved the **best Random Forest model** as `best_heart_disease_model.pkl` for later predictions  
+💡 Understanding feature impact can guide doctors in preventive care.
 
----
+🛠️ Project Steps
+1️⃣ Exploratory Data Analysis (EDA)
 
-## Results
+Inspected dataset shape, missing values, and basic statistics
 
-| Model               | Accuracy | ROC-AUC |
-|--------------------|----------|---------|
-| Logistic Regression | 0.84     | 0.91    |
-| Random Forest       | 0.77     | 0.90    |
-| XGBoost             | 0.75     | 0.75    |
+Visualized feature distributions with histograms, boxplots, and correlation heatmaps
 
-- Logistic Regression gives the **best overall performance**.  
-- Random Forest is highly sensitive to detecting heart disease (high recall for class 1).  
+Checked target balance
 
----
+2️⃣ Data Preprocessing
 
-## Usage
+Split features into categorical and numerical
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/Heart_Disease_Prediction.git
+Applied Standard Scaling for numeric features
+
+Applied One-Hot Encoding for categorical features
+
+Split dataset into train (80%) and test (20%)
+
+3️⃣ Modeling
+
+Trained three models:
+
+Logistic Regression
+
+Random Forest Classifier
+
+XGBoost Classifier
+
+Evaluation metrics:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
+
+ROC-AUC
+
+4️⃣ Hyperparameter Tuning
+
+Optimized Random Forest using RandomizedSearchCV
+
+Achieved best ROC-AUC: 0.926
+
+5️⃣ Feature Importance
+
+Top 15 features visualized using Random Forest importance scores
+
+6️⃣ Model Saving
+
+Best model saved as best_heart_disease_model.pkl for future predictions
+
+📈 Results
+Model	Accuracy	ROC-AUC
+Logistic Regression	0.84	0.91
+Random Forest	0.77	0.90
+XGBoost	0.75	0.75
+
+💡 Key Insights:
+
+Logistic Regression provides best overall performance.
+
+Random Forest excels in detecting heart disease (high recall for positive class).
