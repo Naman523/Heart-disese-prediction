@@ -1,5 +1,10 @@
 ❤️ Heart Disease Prediction Project
 
+
+
+
+
+
 🚀 Overview
 
 This project predicts the presence of heart disease in patients using a structured dataset.
@@ -29,7 +34,8 @@ Numerical: age, trestbps, chol, thalach, oldpeak
 💡 Understanding feature impact can guide doctors in preventive care.
 
 🛠️ Project Steps
-1️⃣ Exploratory Data Analysis (EDA)
+
+Exploratory Data Analysis (EDA)
 
 Inspected dataset shape, missing values, and basic statistics
 
@@ -37,7 +43,7 @@ Visualized feature distributions with histograms, boxplots, and correlation heat
 
 Checked target balance
 
-2️⃣ Data Preprocessing
+Data Preprocessing
 
 Split features into categorical and numerical
 
@@ -47,7 +53,7 @@ Applied One-Hot Encoding for categorical features
 
 Split dataset into train (80%) and test (20%)
 
-3️⃣ Modeling
+Modeling
 
 Trained three models:
 
@@ -57,40 +63,24 @@ Random Forest Classifier
 
 XGBoost Classifier
 
-Evaluation metrics:
+Evaluated using accuracy, precision, recall, F1-score, ROC-AUC
 
-Accuracy
-
-Precision
-
-Recall
-
-F1-score
-
-ROC-AUC
-
-4️⃣ Hyperparameter Tuning
+Hyperparameter Tuning
 
 Optimized Random Forest using RandomizedSearchCV
 
 Achieved best ROC-AUC: 0.926
 
-5️⃣ Feature Importance
+Feature Importance
 
 Top 15 features visualized using Random Forest importance scores
 
-6️⃣ Model Saving
+Model Saving
 
-Best model saved as best_heart_disease_model.pkl for future predictions
+Saved the best Random Forest model as best_heart_disease_model.pkl for future predictions
 
 📈 Results
 Model	Accuracy	ROC-AUC
 Logistic Regression	0.84	0.91
 Random Forest	0.77	0.90
 XGBoost	0.75	0.75
-
-💡 Key Insights:
-
-Logistic Regression provides best overall performance.
-
-Random Forest excels in detecting heart disease (high recall for positive class).
