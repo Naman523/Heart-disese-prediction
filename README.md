@@ -2,6 +2,7 @@
 
 
 link to view http://127.0.0.1:7860/
+emergent.sh view:https://cardiotrack-2.preview.emergentagent.com/
 
 📑 Table of Contents
 
